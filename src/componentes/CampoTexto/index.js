@@ -1,11 +1,17 @@
-import React from 'react'
+import './CampoTexto.css'
 
-export default function CampoTexto(props) {
-  const placeholderModificada = `${props.placeholder}...`
-  return (
-   <div className='campo-texto'>
-    <label>{props.label}</label>
-    <input placeholder={placeholderModificada}/>
-   </div>
-  )
+const CampoTexto = (props) => {
+
+    const placeholderModificada = `${props.placeholder}...` 
+
+    return (
+        <div className="campo-texto">
+            <label>
+                {props.label}
+            </label>
+            <input required={props.obrigatorio} placeholder={placeholderModificada}/>
+        </div>
+    )
 }
+
+export default CampoTexto
